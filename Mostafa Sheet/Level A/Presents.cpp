@@ -2,19 +2,6 @@
 
 using namespace std;
 
-int fonction(int n, int m, int a){
-    int result = 0;
-    if(n/a == m/a and m%a!=0 and n%a!=0){
-        return result;
-    }
-    else{
-        result = (m/a) - (n/a);
-        if (n%a == 0 and n!=0) result += 1;
-    }
-
-    return result ;
-}
-
 int main(){
 
     int n;
