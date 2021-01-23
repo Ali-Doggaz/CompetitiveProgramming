@@ -13,21 +13,19 @@ int main(){
     int STEP,MOD,seed = 0;
     while(cin >> STEP){
         cin >> MOD;
-
         bool T[MOD] = { 0 };
         bool bad = false;
-
-    for(int i=0;i<MOD;i++){
-            seed = (seed+STEP) % MOD;
-            if (T[seed]){
-                bad = true;
-                break;
+        for(int i=0;i<MOD;i++){
+                seed = (seed+STEP) % MOD;
+                if (T[seed]){
+                    bad = true;
+                    break;
+                }
+                T[seed] = true;
             }
-            T[seed] = true;
-        }
-    cout << setw(10) << STEP << setw(10) << MOD << "    ";
-    bad ? cout << "Bad Choice" << endl : cout << "Good Choice" << endl;
-    cout << endl;
+        cout << setw(10) << STEP << setw(10) << MOD << "    ";
+        bad ? cout << "Bad Choice" << endl : cout << "Good Choice" << endl;
+        cout << endl;
     }
     return 0;
 }
